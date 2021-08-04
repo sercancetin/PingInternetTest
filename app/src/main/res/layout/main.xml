@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:myapp="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/btnlogin"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/upperline"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Enter hostname or IP address"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:id="@+id/AddLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/myEditText"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/edittextbg"
+            android:padding="10dp"
+            android:text="" />
+
+        <Button
+            android:id="@+id/myButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:background="@drawable/answerbggreen"
+            android:text="Add" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp">
+
+        <TextView
+            android:id="@+id/myTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="local IP : 127.0.0.1"
+            android:layout_alignParentStart="true"
+            android:textSize="14sp" />
+        <TextView
+            android:id="@+id/txt_mac"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mac Ad : 127.0.0.1"
+            android:layout_alignParentEnd="true"
+            android:textSize="14sp" />
+
+        <ListView
+            android:id="@+id/myListView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/myTextView"
+            tools:listitem="@layout/pingitem" />
+        <ImageButton
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:id="@+id/refreshbutton"
+            android:src="@drawable/refresh"
+            android:layout_alignParentBottom="true"
+            android:background="@android:color/transparent"
+            android:layout_margin="16dp" />
+    </RelativeLayout>
+
+
+
+</LinearLayout>
